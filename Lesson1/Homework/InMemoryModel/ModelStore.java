@@ -28,7 +28,12 @@ public class ModelStore implements IModelChanged {
         cameras = new ArrayList<>();
     }
 
-    public Scene GetScene(int i){
+    public Scene GetScene(int id) {
+        for (int i = 0; i < scenes.size(); i++) {
+            if (scenes.get(i).id == id) {
+                return scenes.get(i);
+            }
+        }
         return null;
     }
 

@@ -19,11 +19,11 @@ public class Scene {
 
     }
 
-    public Type method1(Type type) {
-        return null;
+    public <T> T method1(T type) {
+        return type;
     }
 
-    public Type method2(Type type, Type type2) {
-        return null;
+    public <T> T method2(T type, T type2) {
+        return type;
     }
 }
