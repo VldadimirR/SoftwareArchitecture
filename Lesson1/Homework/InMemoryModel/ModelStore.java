@@ -5,19 +5,28 @@ import Lesson1.Homework.ModelElements.Flash;
 import Lesson1.Homework.ModelElements.PoligonalModel;
 import Lesson1.Homework.ModelElements.Scene;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ModelStore implements IModelChanged {
 
-    public PoligonalModel Model;
+    public List<PoligonalModel> model;
 
-    public Scene Scenes;
+    public List<Scene> scenes;
 
-    public Flash Flashes;
+    public List<Flash> flashes;
 
-    public Camera Cameras;
+    public List<Camera> cameras;
 
     private IModelChangedObserver changedObserver;
 
-
+    public ModelStore(IModelChangedObserver changedObserver) {
+        this.changedObserver = changedObserver;
+        model = new ArrayList<>();
+        scenes = new ArrayList<>();
+        flashes = new ArrayList<>();
+        cameras = new ArrayList<>();
+    }
 
     public Scene GetScene(int i){
         return null;
