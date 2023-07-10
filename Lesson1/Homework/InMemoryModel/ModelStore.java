@@ -18,14 +18,20 @@ public class ModelStore implements IModelChanged {
 
     public List<Camera> cameras;
 
-    private IModelChangedObserver changedObserver;
+    private List<IModelChangedObserver> changedObserver;
 
-    public ModelStore(IModelChangedObserver changedObserver) {
+    public ModelStore(List<IModelChangedObserver> changedObserver) throws Exception {
         this.changedObserver = changedObserver;
         model = new ArrayList<>();
         scenes = new ArrayList<>();
         flashes = new ArrayList<>();
         cameras = new ArrayList<>();
+
+        model.add(new PoligonalModel(null));
+        flashes.add(new Flash(null,null,null,0));
+        cameras.add(new Camera(null,null));
+        scenes.add(new Scene(0,model,flashes,cameras));
+
     }
 
     public Scene GetScene(int id) {
