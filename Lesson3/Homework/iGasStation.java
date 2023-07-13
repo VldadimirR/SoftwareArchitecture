@@ -5,10 +5,9 @@ package Lesson3.Homework;
  */
 
 public interface iGasStation {
-
     /**
      * метод для заправки
-     * @param fuelType - тип топлива
      */
-    void fuelFilling(String fuelType);
+    void fuelFilling();
+
 }

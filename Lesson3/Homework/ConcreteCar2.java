@@ -1,10 +1,9 @@
 package Lesson3.Homework;
-
 /**
- * конкретный класс автомобиля
+ * конкретный класс автомобиля 2
  */
 
-public class ConcreteCar extends Car implements iGasStation {
+public class ConcreteCar2 extends Car implements iGasStation {
     private iGasStation iGasStation;
     private String fuelType;
 
@@ -19,10 +18,10 @@ public class ConcreteCar extends Car implements iGasStation {
      * @param engineSize - объем двигателя
      */
 
-    public ConcreteCar(String brand, String model, String color, String bodyType, Gearbox gearbox, float engineSize) {
+    public ConcreteCar2(String brand, String model, String color, String bodyType, Gearbox gearbox, float engineSize) {
         super(brand, model, color, bodyType,gearbox, engineSize);
-        this.iGasStation = new DieselFuel();
-        this.fuelType = "Дизельный двигатель";
+        iGasStation = new GasolineFuel();
+        this.fuelType = "Бензиновый двигатель";
     }
 
     /**

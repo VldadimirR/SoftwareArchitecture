@@ -14,18 +14,16 @@ public abstract class Car  {
     private int wheels = 4;
     private Gearbox gearbox;
 
-    private Ligth ligth;
-
     private Wiper wiper;
 
     /**
      * конструктор
      *
-     * @param brand    - бренд, задается в классе наследнике
-     * @param model    - модель
-     * @param color    - цвет
-     * @param bodyType - тип кузова
-     * @param gearbox - тип коробки передач
+     * @param brand      - бренд, задается в классе наследнике
+     * @param model      - модель
+     * @param color      - цвет
+     * @param bodyType   - тип кузова
+     * @param gearbox    - тип коробки передач
      * @param engineSize - объем двигателя
      */
     public Car(String brand, String model, String color, String bodyType, Gearbox gearbox, float engineSize) {
@@ -45,24 +43,26 @@ public abstract class Car  {
     /**
      * метод включения фар
      */
-    abstract void useHeadlights(Ligth ligths);
+    abstract void useHeadlights(Ligth ligth);
 
     /**
      * метод включения дворников
      */
-    abstract void useWiper(Wiper wipers);
+    abstract void useWiper(Wiper wiper);
 
     /**
-     * метод переклюения передачи
+     * метод переключения передач
      */
-    abstract void shiftGear(Gearbox gearbox);
-
+    abstract void gearShifting(Gearbox gearbox);
 
     /**
      * метод для измения кол-во колес
+     *
      * @param wheels - кол-во колес
      */
     public void setWheels(int wheels) {
         this.wheels = wheels;
     }
 }
+
+

@@ -7,7 +7,7 @@ public class Gearbox {
     /**
      * метод переключения передач
      */
-    public void gearShifting(){
+    void gearShifting(Gearbox gearbox){
 
     }
 }
